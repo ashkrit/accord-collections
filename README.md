@@ -3,6 +3,52 @@ Java collections with declared contracts. No null surprises, no hidden threading
 
 ---
 
+## Installation
+
+Packages are published to [GitHub Packages](https://github.com/ashkrit/accord-collections/packages).
+
+### 1. Add the repository
+
+```xml
+<repositories>
+    <repository>
+        <id>github</id>
+        <url>https://maven.pkg.github.com/ashkrit/accord-collections</url>
+    </repository>
+</repositories>
+```
+
+### 2. Add the dependency
+
+```xml
+<dependency>
+    <groupId>io.accord.collections</groupId>
+    <artifactId>accord-collections</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+### 3. Authenticate
+
+GitHub Packages requires a personal access token (PAT) with `read:packages` scope even for public packages.
+Add this to `~/.m2/settings.xml`:
+
+```xml
+<settings>
+    <servers>
+        <server>
+            <id>github</id>
+            <username>YOUR_GITHUB_USERNAME</username>
+            <password>YOUR_GITHUB_TOKEN</password>
+        </server>
+    </servers>
+</settings>
+```
+
+Generate a token at **GitHub → Settings → Developer settings → Personal access tokens** with the `read:packages` scope.
+
+---
+
 ## MapPlus
 
 `MapPlus<K, V>` extends `java.util.Map` with five live-view operations and a strict null contract.
