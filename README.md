@@ -5,9 +5,23 @@ Java collections with declared contracts. No null surprises, no hidden threading
 
 ## Installation
 
-Packages are published to [GitHub Packages](https://github.com/ashkrit/accord-collections/packages).
+### Maven Central (recommended)
 
-### 1. Add the repository
+No extra repository or authentication needed.
+
+```xml
+<dependency>
+    <groupId>io.github.ashkrit</groupId>
+    <artifactId>accord-collections</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+### GitHub Packages
+
+Requires a GitHub personal access token (PAT) with `read:packages` scope.
+
+**1. Add the repository**
 
 ```xml
 <repositories>
@@ -18,20 +32,17 @@ Packages are published to [GitHub Packages](https://github.com/ashkrit/accord-co
 </repositories>
 ```
 
-### 2. Add the dependency
+**2. Add the dependency**
 
 ```xml
 <dependency>
-    <groupId>io.accord.collections</groupId>
+    <groupId>io.github.ashkrit</groupId>
     <artifactId>accord-collections</artifactId>
     <version>1.0.0</version>
 </dependency>
 ```
 
-### 3. Authenticate
-
-GitHub Packages requires a personal access token (PAT) with `read:packages` scope even for public packages.
-Add this to `~/.m2/settings.xml`:
+**3. Authenticate** — add to `~/.m2/settings.xml`:
 
 ```xml
 <settings>
